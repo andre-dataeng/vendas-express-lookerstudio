@@ -1,37 +1,25 @@
-# 🚀 Marketing Analytics: Performance de Campanha (Looker Studio)
+# 📈 Marketing Analytics: Performance de Conteúdo & Tráfego
 
-> **🔗 [Clique aqui para acessar o Dashboard Interativo](https://lookerstudio.google.com/reporting/c10a5f9a-84e0-4431-af43-5582c876e048)**
+Este projeto apresenta um ecossistema de monitoramento de performance digital desenvolvido no **Looker Studio**, consolidando métricas de engajamento de artigos, vídeos e campanhas pagas.
 
-Este projeto apresenta um dashboard de alta fidelidade visual desenvolvido no Looker Studio, focado no monitoramento em tempo real de tráfego e engajamento digital. O design foi estruturado sob a identidade <BLOCO DE CÓDIGO>, unindo estética moderna e análise de dados técnica.
+## 🎯 Objetivo
+Analisar o comportamento dos usuários em diferentes canais para otimizar a retenção (Tempo de Leitura) e a aquisição (Cliques em Redes Sociais vs. Pesquisas).
 
-🎯 Objetivo
-Centralizar a visão de funil de marketing para identificar a origem do tráfego (Rede Social vs. Direto) e a eficiência de conversão através de métricas de CTR e cliques pagos.
+## 📊 Inteligência de Dados (Cálculos no Looker)
+Toda a lógica de métricas foi implementada diretamente no **Looker Studio**, utilizando campos calculados para garantir dinamismo total:
+- **CTR (Click-Through Rate):** Medindo a eficiência dos anúncios (Atualmente em **51,83%**).
+- **Distribuição de Tráfego:** Monitoramento de fontes (Redes Sociais: **51,03%** | Visitas Diretas: **19,63%**).
+- **Engajamento por Categoria:** Tempo de leitura total liderado pelo setor de **Tecnologia** (> 9 mil min).
 
-🛠️ Stack Tecnológica
-Ferramenta de BI: Looker Studio.
+## 🛠️ Engenharia de Preparação
+- **Saneamento (Python):** O script `data_prep.py` realiza a padronização de categorias (ex: 'UX' vs 'ux') e limpeza de strings para evitar fragmentação nos filtros do dashboard.
+- **Fontes de Dados:** Estrutura preparada para integração via Google Sheets (Abas: Artigos, Propagandas, Vídeos, Emails).
 
-Processamento de Dados: Python (utilizado para simulação de limpeza de dados de API).
-
-KPIs de Performance: Implementação de métricas calculadas para análise de eficiência.
-
-📊 Métricas em Destaque (Conforme Visualização)
-O painel foi configurado para destacar indicadores críticos de aquisição:
-
-Distribuição de Tráfego: Análise de dominância entre cliques de rede social (51,03%) vs. visitas diretas (19,63%).
-
-Eficiência de Engajamento (CTR): Monitoramento de taxa de clique de 51,83%, indicando alta relevância do conteúdo/anúncio.
-
-Intenção de Busca: Rastreamento de volume de vezes pesquisadas (8,83%) para entender a força orgânica da marca.
-
-Mídia Paga: Controle de volume de cliques pagos para otimização de orçamento.
-
-💡 Diferenciais do Projeto
-Interface UI/UX: Design customizado com foco em legibilidade e hierarquia de informações.
-
-Integração de Dados: Estrutura preparada para receber dados via Google Sheets ou conectores diretos de API.
-
-Análise de Tendência: Gráficos de barras integrados para comparação de volume entre diferentes fontes de tráfego.
-
+## 📈 Insights Extraídos
+- Identificação de picos de **Novos Usuários Únicos** em períodos sazonais (Julho/Agosto).
+- Ranking dos artigos mais lidos, com destaque para "Escuta ativa e como isso mudará sua abordagem" (**2.6M+ visualizações**).
+- Correlação entre cliques pagos (**0,80%**) e o volume de tráfego orgânico.
+---
 ## 📸 Preview
 ![Preview Looker](looker_1.png)
 

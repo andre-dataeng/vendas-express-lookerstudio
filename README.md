@@ -1,4 +1,7 @@
-🚀 Marketing Analytics: Performance de Campanha (Looker Studio)
+# 🚀 Marketing Analytics: Performance de Campanha (Looker Studio)
+
+> **🔗 [Clique aqui para acessar o Dashboard Interativo](https://lookerstudio.google.com/reporting/c10a5f9a-84e0-4431-af43-5582c876e048)**
+
 Este projeto apresenta um dashboard de alta fidelidade visual desenvolvido no Looker Studio, focado no monitoramento em tempo real de tráfego e engajamento digital. O design foi estruturado sob a identidade <BLOCO DE CÓDIGO>, unindo estética moderna e análise de dados técnica.
 
 🎯 Objetivo

@@ -1,24 +1,31 @@
 import pandas as pd
 
-def preparar_dados_looker():
+def clean_marketing_data():
     """
-    Simula o tratamento de uma planilha do Google Sheets 
-    antes de conectar ao Looker Studio.
+    Simula o saneamento de dados de marketing para evitar 
+    duplicidade de categorias e erros de geolocalização.
     """
-    # Dados de exemplo baseados no seu projeto
-    dados = {
-        'Data': ['2025-01-01', '2025-01-02', '2025-01-03'],
-        'Vendas': [1200, 1500, 1100],
-        'Meta': [1000, 1000, 1000]
+    # Dados brutos simulando seus prints (Artigos e Campanhas)
+    raw_data = {
+        'Artigo': ['Escuta ativa ', 'escuta ativa', 'Gestão de Projetos'],
+        'Categoria': ['ux', 'UX', 'Gestão'],
+        'Data': ['2021-06-01', '2021-06-02', '2021-06-03']
     }
-    
-    df = pd.DataFrame(dados)
-    
-    # Calculando a performance da meta (Engenharia de Dados básica)
-    df['Atingimento_%'] = (df['Vendas'] / df['Meta']) * 100
-    
-    print("Dados preparados para o Looker Studio:")
-    print(df)
+
+    df = pd.DataFrame(raw_data)
+
+    print("--- Iniciando Limpeza para Looker Studio ---")
+
+    # 1. Padronização de strings (Evita que 'UX' e 'ux' sejam lidos como categorias diferentes)
+    df['Categoria'] = df['Categoria'].str.upper().str.strip()
+
+    # 2. Limpeza de títulos (Remove espaços extras que quebram filtros)
+    df['Artigo'] = df['Artigo'].str.title().str.strip()
+
+    print("\n✅ Dados normalizados para o Looker:")
+    print(df.head())
+
+    return df
 
 if __name__ == "__main__":
-    preparar_dados_looker()
+    clean_marketing_data()
